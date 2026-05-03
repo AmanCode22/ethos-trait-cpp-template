@@ -11,7 +11,7 @@ After that go to repo settings-> actions-> general and allow read and write perm
 2. **Edit `manifest.json`** → Set your trait name, version, and description.
 3. **Edit `CMakeLists.txt** → Set trait name on first line.
 4. **(OPTIONAL) Create tags.txt → It helps someone find your trait by searching those specfic keywords.
-3. **Write your code** → Edit `src/trait.cpp` with your C functions.
+3. **Write your code** → Edit `src/trait.cpp` with your C++ functions.
 4. **Tag a release** → Push a tag like `v1.0.0`.
 5. **Wait for CI** → Workflows build binaries
 6. **Open a PR to foundry** → You must open a pr to foundry for each version bump also, you can find manifest.json in releases use that for PR as that is different.
