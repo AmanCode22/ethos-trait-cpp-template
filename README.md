@@ -37,12 +37,13 @@ Every function you want to use in Ethos must be exported in `src/trait.cpp`.
 
 Example:
 ```cpp
-int add(int a, int b) {
+extern "C" int add(int a, int b) {
     return a + b;
 }
 ```
 
 Then list it in `manifest.json` under `functions`. The CI workflow reads this and generates the Foundry manifest. For more see Ethos docs on editing manifest.
+Every function must be wrapped in extern "C" , to prevent function mangling to be compatible with ctypes.
 
 **Supported Types:**
 - `int`, `float`, `double`, `char *`, `void`, etc. (See Ethos docs for full list).
